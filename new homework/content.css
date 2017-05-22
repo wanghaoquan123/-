@@ -1,0 +1,48 @@
+#header{
+	height: 205px;
+	background-image: url("images/bg.gif");
+	background-position: center top;
+}
+#banner{
+	width: 100px;
+	height: 164px;
+
+
+}
+#nav_body {
+	height: 34px;
+	text-align: center;
+	
+}
+#nav{
+	height: 40px;
+	background-image: url("images/nav.jpg");
+	}
+#nav_body a{
+	font-weight: bold;
+	color: #fff;
+}
+#nav_body a:hover{
+	text-decoration:none; 
+	color: #f9f603;
+}
+#content_rightone{
+	background-image: url("images/bg.png");
+	height: 180px;
+	width: 240px;
+	margin-top: 50px;
+}
+#content_righttwo{
+	background-image: url("images/show_bg.png");
+	width: 210px;
+}
+#bottom{
+	position: absolute;
+	top: 1000px;
+	left: 200px;
+	width: 1100px;
+	height: 130px;
+	background-image: url("images/foot1.jpg");
+	text-align: center;
+	
+}

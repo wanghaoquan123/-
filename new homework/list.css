@@ -1,0 +1,181 @@
+#header{
+	height: 205px;
+	background-image: url("images/bg.gif");
+	background-position: center top;
+}
+#banner{
+	width: 100px;
+	height: 164px;
+
+
+}
+#nav_body {
+	height: 34px;
+	text-align: center;
+	
+}
+#nav{
+	height: 40px;
+	background-image: url("images/nav.jpg");
+	}
+#nav_body a{
+	font-weight: bold;
+	color: #fff;
+}
+#nav_body a:hover{
+	text-decoration:none; 
+	color: #f9f603;
+}
+
+#bottom{
+	position: absolute;
+	top: 1000px;
+	left: 200px;
+	width: 1100px;
+	height: 130px;
+	background-image: url("images/foot1.jpg");
+	text-align: center;
+	
+}
+#zone{
+	position: absolute;
+	top: 220px;
+	left: 320px;
+	width: 870px;
+	height: 500px;
+	
+}
+#zone_left{
+	width: 200px;
+	height: 550px;
+	
+
+}
+#zone_left_one{
+	background-image: url("images/bg.png");
+	height: 220px;
+	
+	margin-top: 15px;
+}
+#zone_left_one_liebiao{
+	margin-left: 35px;
+	list-style: none;
+	letter-spacing: 1px;
+
+}
+#zhushi{
+	position: absolute;
+	left: 370px;
+	top: 316px;
+	
+}
+#zone_left_two{
+	margin-top:20px;
+	background-image: url("images/bg.png"); 
+	height: 200px;
+	
+}
+#zone_left_three{
+	margin-top:20px;
+
+}
+#zone_right{
+	position: absolute;
+	left: 200px;
+	top: 30px;
+	
+	width: 670px;
+}
+#zone_right_one{
+	background-image: url("images/listtitle.png");
+	width: 670px;
+	height: 50px;
+}
+#kuang{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 765px;
+	height: 15px;
+	width: 15px;
+}
+#kuangone{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 785px;
+	height: 15px;
+	width: 15px;
+}
+#kuangtwo{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 805px;
+	height: 15px;
+	width: 15px;
+}
+#kuangthree{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 805px;
+	height: 15px;
+	width: 15px;
+}
+#kuangfour{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 824px;
+	height: 15px;
+	width: 15px;
+}
+#kuangfive{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 844px;
+	height: 15px;
+	width: 15px;
+}
+#kuangsix{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 862px;
+	height: 15px;
+	width: 15px;
+}
+#kuangseven{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 884px;
+	height: 15px;
+	width: 15px;
+}
+#kuangeight{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 906px;
+	height: 15px;
+	width: 23px;
+}
+#kuangnine{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 939px;
+	height: 15px;
+	width: 23px;
+}
+#kuangten{
+	position: absolute;
+	border:1px solid;
+	top: 824px;
+	left: 969px;
+	height: 15px;
+	width: 15px;
+}
