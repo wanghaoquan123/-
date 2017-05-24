@@ -1,0 +1,73 @@
+html{
+	font-size: 12px;
+	color: #522a06;
+	font-family: "宋体";
+	padding: 0;
+}
+
+body{
+	margin: auto;
+}
+a{
+	text-decoration: none;
+	color: #522a06;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+
+#header{
+	height: 205px;
+	background-position: center;
+	background-position: top;	
+}
+#banner{
+	height: 125px;
+	width: 1000px;
+	text-align: center;
+	padding-top: 38px;
+	padding-left: 25px;
+}
+#nav{
+	height: 40px;
+}
+.nav_body{
+	width: 1800px;
+	height: 42px;
+	text-align: center;
+}
+.nav_content{
+	width: 800px;
+	font-weight: bolder;
+	float: left;
+	padding-left: 200px;
+}
+.nav_content a{
+	line-height: 40px;	
+	color: #fff;
+}
+.nav_content a:hover{
+	color: #f9f603;
+	text-decoration: none;
+}
+.nav_search{
+	float: left;
+	display: inline;
+	padding-top: 8px;
+}
+
+
+
+
+
+
+#footer{
+	height: 105px;
+	width: 100%;
+	clear: all;
+	float: left;
+}
