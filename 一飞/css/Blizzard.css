@@ -1,0 +1,32 @@
+#middle{
+	background-color: #ddd7d7;
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+#middle_all{
+	margin: 0 auto;
+	float: left;
+	height: 395.7px;
+	margin-left: 260px;
+}
+#middle_all a{
+	display: block;
+	float: left;
+	width: 164.6px;
+	border:1px solid #3E414A;
+	opacity: 0.9;
+}
+#middle_all a:hover{
+	opacity: 1.0;
+}
+#middle_all_tip{
+	width: 164.6px;
+	height: 50.4px;
+	background-color: #282e36;
+}
+#middle_all_tip p{
+	margin:0;
+	padding-top: 15px;
+	color: #a2b9c2;
+}

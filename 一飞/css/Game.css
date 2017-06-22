@@ -1,0 +1,28 @@
+#middle{
+	background-color: #ddd7d7;
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+#middle_text{
+	width: 950px; 
+	margin: 0 auto;
+}
+#mb{
+	text-align: left;
+	font-size: 15px;
+	color: #878080;
+}
+#mb a{
+	color: #878080;
+}
+#mb a:hover{
+	color: black;
+}
+#middle h3{
+	text-align: left;
+}
+#middle p{
+	text-indent: 2em;
+	text-align: left;
+}
