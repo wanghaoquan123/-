@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	
+	<style type="text/css">
+	
+	.container{  
+		width:450px;  
+		border:1px solid #6C9C2C;  
+		height:25px;  
+	 }
+	#bar{  
+ 	   background:#222;  
+ 	   float:left; 
+  	  height:100%;  
+ 	   text-align:center;  
+  	  line-height:150%; 
+    }  
+	
+	#picScroll{
+		margin:0 auto;
+		height:200px;
+		border:0px solid #C90;
+		white-space:nowrap; 
+		width:800px;
+		overflow:hidden;
+	}
+		a:link{
+		color: white;
+		text-decoration: none;
+	}
+
+	#dh{
+		background-image: url(images/daohang.png);
+		width: 1900px;
+		height: 70px;
+		float: left;
+	}
+	#dhwz{
+		color: white;
+		font-size: 10px;
+		width: 700px;
+		height: 60px;
+		
+		position: absolute;
+		top:1px;
+		left: 730px;
+
+	}
+	#bj{
+		background-image: url(images/timg.jpg);
+		background-repeat: no-repeat;
+		width:1900px;
+		height: 500px;
+	}
+
+	#zt{
+		background-image: url(images/zt.png);
+		width: 1900px;
+		height: 1300px;
+	}
+	#da{
+		border: 0px solid white;
+		width: 1800px;
+		height:500px;
+
+	}
+	#one{
+		border: 0px solid white;
+		width: 700px;
+		height:475px;
+		margin-left: 400px;
+		float: left;
+	}
+	#one_a{
+		border: 1px solid #292b2f;
+		width: 500px;
+		height:477px;
+		
+		float: left;
+
+	}
+	#one_b{
+		border: 1px solid #292b2f;
+		width: 700px;
+		height:440px;
+		
+		float: left;
+
+	}
+	#two{
+		border: 0px solid white;
+		width: 700px;
+		height:475px;
+		margin-left: 400px;
+		float: left;
+	}
+	#two_a{
+		border: 1px solid #292b2f;
+		width: 500px;
+		height:477px;
+		
+		float: left;
+
+	}
+	#two_b{
+		border: 1px solid #292b2f;
+		width: 700px;
+		height:440px;
+		
+		float: left;
+
+	}
+	#db{
+		border: 0px solid white;
+		width: 1900px;
+		height:200px;
+		margin-top:90px;
+		float: left;
+		
+		background-color: black;
+		color: white;
+	}
+</style>  
+<style type="text/css">
+		* {
+		font-size:20px;
+		margin:0px;
+		padding:0px;
+		}
+		#nav{
+		margin-top: 20px;
+		margin-left: 50px;
+		list-style:none;
+		line-height:27px;
+		}
+		#nav a:link,#nav a:visited{
+		display:block;
+		width:80px;
+		color: #666;
+		text-align:center;
+		text-decoration:none;
+		}
+		#nav a:hover{
+		color: #FFF;
+		text-decoration: underline;
+		font-weight: bold;
+		background:#999;
+		}
+		#nav ul{list-style: none;}
+		#nav li{
+		float:left;
+		width: 100px;
+		}
+		#nav li ul li a:hover{
+		background:#C00;
+		}
+
+		#nav li ul{
+		display:none;
+		}
+		#nav li.subMenuShow ul{
+		display:block;
+		}
+	</style>
+
+	<script type="text/javascript">
+		setTimeout(window.onload = function(){
+			var liNodes = document.getElementsByTagName("li");
+			for (var i=0; i<liNodes.length; i++)
+			{
+				liNodes[i].onmouseover = function(){
+					this.className = "subMenuShow";
+				}
+				liNodes[i].onmouseout = function(){
+					this.className = "";
+				}
+			}
+		},50)
+	</script>
+
+<script type="text/javascript">  
+
+
+ function run(){  
+        var bar = document.getElementById("bar"); 
+        var total = document.getElementById("total"); 
+    bar.style.width=parseInt(bar.style.width) + 5 + "%";  
+    if(bar.style.width == "425%"){  
+      window.clearTimeout(timeout); 
+      return; 
+    } 
+    var timeout=window.setTimeout("run()",100); 
+  } 
+    setTimeout(window.onload = function(){  
+       run(); 
+    }  ,100)
+
+
+
+
+window.onload=function(){
+
+  var speed = 10; //设置图片滑动速度为10毫秒
+  picScroll = document.getElementById("picScroll");//获取最外面的容器
+  picScroll1 = document.getElementById("picScroll1");//获取存放内容的容器
+  picscroll2 = document.getElementById("picScroll2");//获取临时存放内容的容器
+
+  picscroll2.innerHTML = picScroll1.innerHTML;//将容器的内容填到容器2
+
+  var ID=setInterval(changeToLeft,speed);//每speed毫秒，向左挪动一下
+
+  //2、鼠标经过时暂停图片滚动
+  picScroll.onmouseover=function() {
+    clearInterval(ID);
+  }
+  //3、鼠标离开后图片继续滚动
+  picScroll.onmouseout=function() {
+    ID=setInterval(changeToLeft,speed);
+  }
+
+
+};
+//1、图片向左滚动函数实现
+function changeToLeft(){
+  
+  if(picScroll.scrollLeft >= (picScroll1.offsetWidth)){
+    picScroll.scrollLeft = 0;
+  }
+  else{
+    picScroll.scrollLeft += 1;
+  }
+}
+
+
+
+
+
+
+</script> 
+
+
+
+</head>
+<body>
+
+	
+	<div id="dh">
+	
+	<img src="images/logo.png" style="margin-left: 450px;margin-top: 10px;">
+	<font id="dhwz">
+	<ul id="nav">
+		<li><a  href="#">首页</a>
+			<ul >
+				<li><a href="#">品牌站</a></li>
+				<li><a href="#">个人中心</a></li>
+			</ul>
+		</li>
+		<li><a href="#">资讯</a>
+			<ul>
+				<li><a href="#">官方新闻</a></li>
+				<li><a href="#">赛事新闻</a></li>
+			</ul>
+		</li>
+		<li><a href="#">赛事</a>
+			<ul>
+				<li><a href="#">赛事中心</a></li>
+				<li><a href="#">职业赛季</a></li>
+			</ul>
+		</li>
+		<li><a href="#">互动</a>
+			<ul>
+				<li><a href="#">官方活动</a></li>
+				<li><a href="#">玩家论坛</a></li>
+			</ul>
+		</li>
+		<li><a href="#">资料</a>
+			<ul>
+				<li><a href="#">英雄资料</a></li>
+				<li><a href="#">物品资料</a></li>
+			</ul>
+		</li>
+		<li><a href="#">&nbsp;&nbsp;服务</a>
+			<ul>
+				<li><a href="#">客服中心</a></li>
+				<li><a href="#">网吧特权</a></li>
+			</ul>
+		</li>
+	</ul> </font>
+	</div>
+
+	<div id="bj">
+<!-- jindutiao -->
+	
+	<div class="container"> 
+
+		<div id="bar" style="width:0%;">
+		</div>  
+
+	</div>  
+  <span id="total"></span> 
+
+ 
+	 
+	</div>
+
+	<div id="zt">
+	
+	<div id="picScroll">
+    <span id="picScroll1">
+      <img src="images/1.png" />
+      <img src="images/3.png" />
+      <img src="images/4.png" />
+      <img src="images/5.png" />
+      
+    </span>
+    <span id="picScroll2"></span>
+    </div>
+
+	
+
+	<div id="da">
+
+		<div id="one">
+		<img src="images/hd.png" style="float: left;">
+		<a href="#"><img src="images/gd.png" style="float: right;margin-top: 7px;margin-right: 10px;"></a>
+
+		<div id="one_b">
+			<a href="#"><img src="images/one_b_a.png" style="margin-left: 30px;margin-top: 20px;"></a>
+			<a href="#"><img src="images/one_b_b.png" style="margin-left: 20px;margin-top: 10px;"></a>
+			<a href="#"><img src="images/one_b_c.png" style="margin-left: 30px;margin-top: 30px;"></a>
+			<a href="#"><img src="images/one_b_d.png" style="margin-left: 20px;margin-top: 10px;"></a>
+		</div>
+
+		</div>
+		<div id="one_a">
+		<a href="#"><img src="images/qwer.png" style="margin-top: 20px;margin-left: 30px; "></a>
+
+	<div style="margin-left: 100px;margin-top: 60px;margin-bottom: 70px;color: white;">
+
+	用户名：<input type="text" name="username"><br />
+	<br>
+	密码：&nbsp;<input type="password" name="password"><br />
+	<br>
+	请输入验证码:<input type="text" name="yzm" style="width:50px;">
+
+	<img src="images/yzm.png">
+	<br><br>
+	&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="登录">&nbsp;&nbsp;
+	<input type="button" value="取消">
+	</div>
+	<a href="list.html">
+	<img src="images/zc.png"></a>
+	
+	</div>
+	</div>
+	<br>
+
+<div id="two">
+
+		<img src="images/sp.png" style="float: left;">
+		<a href="#"><img src="images/gd.png" style="float: right;margin-top: 7px;margin-right: 10px;"></a>
+
+		<div id="two_b">
+			<a href="#"><img src="images/two_b_a.png" style="margin-left: 20px;margin-top: 30px;"></a>
+			<a href="#"><img src="images/two_b_b.png" style="margin-left: 20px;"></a>
+			<a href="#"><img src="images/two_b_c.png" style="margin-left: 20px;"></a>
+			<a href="#"><img src="images/two_b_d.png" style="margin-left: 20px;margin-top: 40px;"></a>
+			<a href="#"><img src="images/two_b_e.png" style="margin-left: 20px;"></a>
+			<a href="#"><img src="images/two_b_f.png" style="margin-left: 20px;"></a>
+		</div>
+
+		</div>
+		
+		<div id="two_a">
+		
+		<input type="text" name="wenti" style="margin-left: 70px;margin-top: 45px;">
+		<a href="list.html">
+<img src="images/wenti.png" style="margin-top: 35px;margin-right: 90px;float: right;">
+	</a>
+	<br>
+	<div style="border: 0px solid white;
+			width: 400px;
+			height: 350px;
+			float: left;
+			margin-top: 20px;
+			margin-left: 40px;
+			color: white;
+	">
+
+常见问题<br><hr><font style="color: white;">
+<ul>
+	<li><a href="#"><font style="color: white;">如何找回与DOTA2账户绑定的完美通行证？</font></a></li><br>
+	<li><a href="#"><font style="color: white;">为什么我需要注册两个账号？</font></a></li><br>
+	<li><a href="#"><font style="color: white;">如何注册DOTA2账号？</a></li><br>
+	<li><a href="#"><font style="color: white;">如何绑定完美通行证（完美电竞账号）？</font></a></li><br>
+	<li><a href="#"><font style="color: white;">运行游戏后显示“正在连接到DOTA2网络”, 怎么办？</font></a></li><br>
+	
+	
+</ul></font>
+
+
+	</div>
+	
+	
+
+	</div>
+
+<div id="db">
+<br><br>
+<img src="images/dblogo.png" style="margin-left: 500px;">
+<div style="float: right;margin-right: 275px;color: #959595;">
+完美世界（北京）网络技术有限公司 版权所有 Copyright © 2012-2017 Perfect World Co., Ltd. All Rights reserved<br>
+©2012 Valve Corporation. All Rights reserved. Licensed to Perfect World Co., Ltd. in China</div><br>
+<div style="text-align:center;color: #333;">
+京ICP证：050016号《网络文化经营许可证》编号：京网文[2011]0782-287号 《网络视听许可证》编号：0110587<br>
+京公网安备110105019888号 文网进字[2013] 028号 新出审字[2013] 1505号 ISBN：978-7-89989-826-0</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</body>
+</html>
