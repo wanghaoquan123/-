@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<style type="text/css">
+		body{
+            margin:0 auto ；
+		}
+		#header{
+			background-image: url(images/czer.jpg);
+		}
+
+		#news_pic{
+			background-image: url(images/QQ1.png);
+		}
+		#footer{
+			background-color:#696969;
+		}
+		#divTip1{
+		  background-color:gray;
+		  display:none;
+		  padding:5px;
+	      position:absolute;
+		}
+		#toolTip{
+		  font-weight:bold;
+		  color:white;
+		  font-size: 17px;
+		}
+
+		#img{    width: 130px;
+		  height: 130px;
+		  margin-left: 10px;
+		}
+		#picScroll{
+			margin:0 auto;
+			height:135px;
+			white-space:nowrap; 
+			width:600px;
+			overflow:hidden;
+		}
+		* {
+		font-size:12px;
+		margin:0px;
+		padding:0px;
+		}
+		#nav1{
+		margin-top: -150px;
+		margin-left: 10px;
+		list-style:none;
+		line-height:27px;
+		}
+		#nav1 a:link,#nav1 a:visited{
+		display:block;
+		width:80px;
+		color: black;
+		text-align:center;
+		text-decoration:none;
+		background:white ;
+		}
+		#nav1 a:hover{
+		color: blue;
+		text-decoration: underline;
+		font-weight: bold;
+		}
+		#nav1 ul{list-style: none;}
+		#nav1 li{
+		float:left;
+		width: 80px;
+		}
+		#nav1 li ul li a:hover{
+		}
+        #nav1 li ul{
+		display:none;
+		}
+		#nav1 li.subMenuShow ul{
+		display:block;
+		}
+		#divTip1{
+		  background-color:	#FF0000;
+		  display:none;
+		  padding:5px;
+	      position:absolute;
+		}
+		#toolTip{
+		  font-weight:bold;
+		}
+
+	</style>
+	<script type="text/javascript">
+		    window.onload=function(){
+
+			var pic=document.getElementById("pic");
+			var divTip1=document.getElementById("divTip1");
+			pic.onmousemove=function(e){
+				divTip1.style.display="block";
+				divTip1.style.left=e.clientX+2+"px";
+				divTip1.style.top=e.clientY+2+"px";
+			}
+			pic.onmouseout=function(){
+				divTip1.style.display="none";
+			}
+		
+			var liNodes = document.getElementsByTagName("li");
+			for (var i=0; i<liNodes.length; i++)
+			{
+				liNodes[i].onmouseover = function(){
+					this.className = "subMenuShow";
+				}
+				liNodes[i].onmouseout = function(){
+					this.className = "";
+				}
+			}
+
+
+		    var speed = 30;
+		    picScroll = document.getElementById("picScroll");
+		    picScroll1 = document.getElementById("picScroll1");
+		    picscroll2 = document.getElementById("picScroll2");
+
+		    picscroll2.innerHTML = picScroll1.innerHTML;
+
+		    var ID=setInterval(changeToLeft,40);
+		    picScroll.onmouseover=function() {
+			clearInterval(ID);
+		}
+		    picScroll.onmouseout=function() {
+			    ID=setInterval(changeToLeft,speed);
+		}
+
+
+};
+		function changeToLeft(){
+			
+			if(picScroll.scrollLeft >= (picScroll1.offsetWidth)){
+				picScroll.scrollLeft = 0;
+			}
+			else{
+				picScroll.scrollLeft += 1;
+			}
+		}
+	</script>
+</head>
+<body>
+	<!--页头部分-->
+	<div id="header">
+		
+		<div id="banner">
+			<div style="position: absolute; top: 10px;
+			left: 100px;">
+
+			<div id="div1">
+	  	<img src="images/logo.png" id="pic"/>
+	    <div id="divTip1">
+		  	<div id="toolTip"><!--弹出层效果-->沧州市第二中学心理咨询室暨沧州市未成年人心理维护中心
+			地址：
+			沧州市第二中学致和楼三楼德育处
+			预约电话：
+			0317—2077112</div>
+
+		</div>
+	</div></div>
+		</div>
+				
+				<div class="nav_content">
+		<ul id="nav1"><!--下拉菜单效果-->
+		<li><a  href="#">新闻资讯 |</a>
+			<ul >
+				<li><a href="#">十九大…</a></li>
+				<li><a href="#">校园新闻</a></li>
+				<li><a href="#">通知公告</a></li>
+				<li><a href="#">媒体关注</a></li>
+			</ul>
+		</li>
+		<li><a  href="#">学校概况 |</a>
+			<ul >
+				<li><a href="#">学校简介</a></li>
+				<li><a href="#">校园文化</a></li>
+				<li><a href="#">组织机构</a></li>
+				<li><a href="#">校园风光</a></li>
+			</ul>
+		</li>
+		<li><a  href="#">教学天地 |</a>
+			<ul >
+				<li><a href="#">教学活动</a></li>
+				<li><a href="#">教学成果</a></li>
+				<li><a href="#">课改之窗</a></li>
+				<li><a href="#">图书馆</a></li>
+			</ul>
+		</li>
+		<li><a href="#">德育之窗 |</a>
+			<ul>
+				<li><a href="#">班级管理</a></li>
+				<li><a href="#">宿舍管理</a></li>
+				<li><a href="#">心理教育</a></li>
+			</ul>
+		</li>
+		<li><a href="#">高考专栏 |</a>
+			<ul>
+				<li><a href="#">高考动态</a></li>
+				<li><a href="#">高考喜报</a></li>
+				<li><a href="#">高考指导</a></li>
+			</ul>
+		</li>
+		<li><a href="#">党建园地 |</a>
+			<ul>
+				<li><a href="#">党员风采</a></li>
+				<li><a href="#">党建动态</a></li>
+				<li><a href="#">青年党校</a></li>
+				<li><a href="#">共青团</a></li>
+			</ul>
+		</li>
+		<li><a href="#">教师队伍 |</a>
+			<ul>
+				<li><a href="#">特级教师</a></li>
+				<li><a href="#">学科带…</a></li>
+				<li><a href="#">教师荣誉</a></li>
+			</ul>
+		</li>
+		<li><a href="#">学生天地</a>
+			<ul>
+				<li><a href="#">学生作品</a></li>
+				<li><a href="#">学生报刊</a></li>
+				<li><a href="#">校园之星</a></li>
+				<li><a href="#">学生活动</a></li>
+			</ul>
+		</li>
+	</ul>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<!--页面主体部分-->
+	<div  id="content">
+		<div id="content_top">
+			<div id="news_pic">					
+			</div>
+			
+			<div id="news_list">
+				<div style="float: left;  padding-top: 5px;"><img src="images/QQ2.png"></div>
+				  <ul style="padding-left: 20px;">
+					<li><a href="#">给梦想注入激情</a><font style="float: right;">2017-06-16</font></li>
+					<li><a href="#">致即将走上高考考场的学生的信</a><font style="float: right;">2017-06-02</font></li>
+					<li><a href="#">我校心理健康教育活动月纪实</a><font style="float: right;">2017-06-01</font></li>
+					<li><a href="#">我校举办教工运动会</a><font style="float: right;">2017-05-24</font></li>
+					<li><a href="#">我校召开“一问责八清理”专项行动大会</a><font style="float: right;">2017-05-19</font></li>
+					<li><a href="#">天津市瀛海学校来我校参观学习</a><font style="float: right;">2017-05-18</font></li>
+					<li><a href="#">专家为高三文科生进行考前辅导</a><font style="float: right;">2017-05-18</font></li>
+				</ul>
+			</div>
+			
+			<div id="news_announce">
+				<div style="float: left;"><img src="images/QQ3.png" ></div>
+				<div style=" width: 278px; height: 205px; float: left;">
+					<div style="margin: 10px;">
+						<ul style="padding-left: 15px; list-style-image:url(images/QQ4.png);">
+							<li><a href="#">沧州市城乡居民医疗保.....</a></li>
+							<li><a href="#">沧州市第二中学新高一（2...</a></li>
+					 		<li><a href="#">沧州市第二中学2017年...</a></li>
+							<li><a href="#">刘洪芳参评中学高职评审一...</a></li>
+							<li><a href="#">王文仓老师参评中学高级教...</a></li>
+							<li><a href="#">沧州市第二中学2016年...</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="content_bottom_left">
+			
+			<div id="academic">
+				<div style=" height: 40px; background-repeat: no-repeat; ">
+				<img src="images/QQ5.png">
+                        <ul style="padding-left: 15px; list-style-image:url(images/QQ4.png);">
+							<li><a href="#">关于加紧展开空军第十一批女飞行学员...</a></li>
+							<li><a href="#">关于2017年公安现役院校招生体检个别...</a></li>
+							<li><a href="#">关于开展空军招飞补充报考工作的通知</a></li>
+							<li><a href="#">2017年军校、武警计划</a></li>
+							<li><a href="#">关于做好2017年公安普通高等院校和...</a></li>
+						</ul>
+					
+				</div>
+			</div>
+			<div id="book_news" style="height: 54px;">
+				<img src="images/QQ6.png" style="float: right;">
+				<img src="images/QQ7.png" >
+				  
+				
+						<ul style="padding-left: 20px;">
+							<li><a href="#">化学应试技巧</a><font style="float: right;">2016-06-14</font></li>
+							<li><a href="#">教学心得</a><font style="float: right;">2016-06-14</font></li>
+							<li><a href="#">高考心得</a><font style="float: right;">2016-06-14</font></li>
+							<li><a href="#">学法指导</a><font style="float: right;">2016-06-14</font></li>
+						</ul>
+				
+			</div>
+			
+				
+			</div>
+			<div id="fengcai2" style="background-image: url(images/fengcai_bg2.png); margin-top:100px; ">
+				<div id="picScroll"><!--图片滚动效果-->
+		<span id="picScroll1">
+		    <img id="img" src="images/QQ8.png" />
+			<img id="img" src="images/QQ9.png" />
+			<img id="img" src="images/QQ10.png" />
+			<img id="img" src="images/QQ11.png" />
+			<img id="img" src="images/QQ12.png" />
+		</span>
+		<span id="picScroll2"></span>
+		</div>
+		</div>
+
+
+<div id="content_bottom_right">
+			<div id="show1" ">
+				<div  >
+					<img src="images/QQ13.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚部分-->
+	<div id="footer">
+		<div style="margin-top: 30px;">
+			<div style="text-align-last: center; font-weight: bolder;">
+				地址：沧州市新华西路39号  邮编：061001  E-mail：czezwg@163.com  电话：0317-2077100  招生热线: 0317-2077124 0317-2077141
+			</div>
+			<div style="text-align-last: center;">
+				<img src="images/QQ14.png">
+			</div>
+			<div style="text-align-last: center;">
+				Copyright 2006-2008 沧州市第二中学 www.czez.cn All Rights Reserved.
+			</div>
+			<div style="text-align-last: center;">
+				冀ICP备13006140号 沧公网安备130900001808  冀公网安备 13090302000134号
+			</div>
+			<div style="margin-left: 550px;margin-top: 10px;text-align: center; height: 55px; width: 200px;">
+				<img  src="images/QQ15.png"><br/>-关注沧州二中微信-
+			</div>
+		</div>
+	</div>
+</body>
+</html>
