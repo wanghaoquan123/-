@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>大作业</title>
+	<meta charset="utf-8">
+	<style type="text/css" >
+		.container{
+			width:450px;
+			border:1px soild #6C9C2B;
+			height: 25px;
+
+		}
+		#bar{
+			background:yellow;
+		
+			float:left; 
+  		 height:100%;  
+   text-align:right;  
+   line-height:150%;
+			}	
+   		.my{
+			li.display: inline;
+		}
+		
+		
+	</style>
+	
+	<style type="text/css">
+		* {
+		font-size: 14px;
+		margin:0px;
+		padding:0px;
+		}
+		#nav{
+		margin-top: 20px;
+		margin-left: 50px;
+		list-style:none;
+		line-height:27px;
+		}
+		#nav a:link,#nav a:visited{
+		display:block;
+		width:80px;
+		color: black;
+		text-align:center;
+		text-decoration:none;
+		background:#F0F0F0;
+		}
+		#nav a:hover{
+		color: #FFF;
+		text-decoration: underline;
+		font-weight: bold;
+		background:#FFCC00;
+		}
+		#nav ul{list-style: none;}
+		#nav li{
+		float:left;
+		width: 80px;
+		}
+		#nav li ul li a:hover{
+		background:#C00;
+		}
+
+		#nav li ul{
+		display:none;
+		}
+		#nav li.subMenuShow ul{
+		display:block;
+		}
+	</style>
+	<script type="text/javascript">
+		setTimeout(window.onload = function(){
+			var liNodes = document.getElementsByTagName("li");
+			for (var i=0; i<liNodes.length; i++)
+			{
+				liNodes[i].onmouseover = function(){
+					this.className = "subMenuShow";
+				}
+				liNodes[i].onmouseout = function(){
+					this.className = "";
+				}
+			}
+		},10);
+	</script>
+	 <script type="text/javascript">
+  function run(){
+   var bar = document.getElementById("bar");
+   var total = document.getElementById("total");
+   bar.style.width=parseInt(bar.style.width)+1+"%";
+   
+   if(bar.style.width=="335%"){
+    window.clearTimeOut(timeout);
+    return;
+   } 
+   var timeout=window.setTimeout("run()",10); 
+  }
+  
+    setTimeout(window.onload = function(){  
+      run(); 
+    }  ,100); 
+ </script>
+	
+	<script type="text/javascript">
+    Img = new Array("logo2.jpg","logo3.jpg");
+    size = Img.length;
+    i = 0;
+    function chImg(){
+    picID.src = Img[i];
+    i++;
+    if (i>=size) i = 0;
+    setTimeout("chImg()",2000);
+    }
+  setTimeout(window.onload = function(){  
+      chImg(); 
+    }  ,1000);
+      
+    </script>
+	 
+</head>
+<body >
+	<div style="position: absolute; top:100px;right: 300px;>
+		<img src="sousuo.jpg"/>
+		<input type="text" name="text" style="margin-top: px;"> 
+	</div>  
+	<div style="background-color: #FF9933;height: 30px;width: 1500px;">
+		<a href="#"style="margin-left:1100px;color:white;text-decoration: none;">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="#"style="color:white;text-decoration: none;">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="#"style="color:white;text-decoration: none;">快速导航</a>
+	</div>
+	<div style="background-color:#F0F0F0;width:1500px;">
+		<div style="margin-left: 120px;margin-right: 120px">
+			<img src="logo.png" style="margin-top: 50px;">
+			
+			<br>
+			<br>
+			<br>
+			<hr>
+			<ul id="nav">
+		<li><a  href="#">学院概况</a>
+			<ul >
+				<li><a href="#">学院介绍</a></li>
+				
+			</ul>
+		</li>
+		<li><a href="#">教育教学</a>
+			<ul>
+				<li><a href="#">专业介绍</a></li>
+				
+			</ul>
+		</li>
+		<li><a href="#">学生工作</a>
+			<ul>
+				<li><a href="#">党团建设</a></li>
+			
+			</ul>
+		</li>
+		<li><a href="#">国际交流</a>
+			<ul>
+				<li><a href="#">交换生项目</a></li>
+				
+			</ul>
+		</li>
+		<li><a href="#">科研合作</a>
+			<ul>
+				<li><a href="#">科研项目</a></li>
+				
+				
+			</ul>
+		</li>
+		<li><a href="#">招生就业</a>
+			<ul>
+				<li><a href="#">就业指导</a></li>
+				
+				
+			</ul>
+		</li>
+			<li><a href="#">校园风采</a>
+			<ul>
+				<li><a href="#">就业明星</a></li>
+				
+				
+			</ul>
+		</li>
+		<li><a href="#">信息公开</a>
+			<ul>
+				<li><a href="#">规章制度</a></li>
+				
+			</ul>
+		</li>
+	</ul>
+
+
+
+
+
+			<br>
+			<br>
+			<br>
+			<img id="picID" >
+			<br>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div id="bar" style="width:0%;"></div>
+	</div>
+	<span id="total"></span>
+	
+
+	<div style="margin-left: 120px;margin-right: 120px;height: 200px;"><img src="daohanglan.jpg"style="width:1200px;">
+		<div style="position: absolute;left: 160px;top: 490px;background-color: orange;width: 170px;height: 60px;">
+			
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重要通知
+			
+		</div>
+
+	<ul style="list-style-image: url(xiaotubiao.jpg);margin-left: 80px;">
+		<br>
+		<li><a href="#" style="text-decoration: none;color: black;class="hover-orange"">重要通知</a></li><br>
+		<li><a href="#" style="text-decoration: none;color: black;">学院月刊</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">招生专题</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">学院新闻</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">媒体关注</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">学院地图</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">项目实训</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">行业动态</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">学院荣誉</a></li><br>
+		<li><a href="#"style="text-decoration: none;color: black;">学院之星</a></li>
+	</ul>
+	</div>
+
+	<div style="position: absolute;margin-left: 430px;border: 1px;top: 530px;">
+		<ul style="list-style: url(xiaotubiao.jpg);">
+			<li>2017-2018年度第一学期学校职业发展咨询室咨询安排<font style="margin-left: 400px;">2017-09-13</font></li><hr><br>
+			<li>讲座通知：Trends in Computer Science: Issues and Hopes<font style="margin-left:358px;">2017-09-13</font></li><hr><br>
+			<li>2017-2018年第一学期学校心理咨询室值班安排<font style="margin-left: 445px;">2017-09-13</font></li><hr><br>
+			<li>河北师范大学“校园一卡通”应用及使用指南<font style="margin-left: 460px;">2017-09-13</font></li><hr><br>
+			<li>河北师范大学2017年高考志愿填报咨询会安排<font style="margin-left: 458px;">2017-09-13</font></li><hr><br>
+			<li>端午节放假通知<font style="margin-left: 645px;">2017-09-13</font></li><hr><br>
+			<li>关于认真学习习近平总书记对推进“两学一做”学习教育…<font style="margin-left: 380px;">2017-09-13</font></li><hr><br>
+			<li>清明节放假通知<font style="margin-left: 646px;">2017-09-13</font></li><hr><br>
+			<li>学术活动：五百载风雨历程二十世家国情怀<font style="margin-left: 480px;">2017-09-13</font></li><hr><br>
+			<li>报告会通知<font style="margin-left: 675px;">2017-09-13</font></li><hr><br>
+			<li>寒假放假通知<font style="margin-left: 660px;">2017-09-13</font></li><hr>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<a href="#"style="margin-left: 300px;text-decoration: none;color:black;text-decoration: none;">1</a>
+		<a href="#" style="margin-left: 3px;text-decoration: none;color:black;text-decoration: none;">2</a>
+		<a href="#" style="margin-left: 3px;text-decoration: none;color:black;text-decoration: none;">3</a>
+		<a href="#" style="margin-left: 3px;text-decoration: none;color:black;text-decoration: none;">4</a>
+		<a href="#" style="margin-left: 3px;text-decoration: none;color:black;text-decoration: none;">5</a>
+		<a href="#" style="margin-left: 3px;text-decoration: none;color:black;text-decoration: none;">末页</a>
+		<input type="text" name="text" style="width: 15px;">页
+		<a href="#" style="margin-left: 3px;text-decoration: none;color:black;text-decoration: none;">跳转</a>
+		</div>
+
+
+		<div style="position: absolute;top: 1080px;width: 1500px;background-image: url(beijingtu.jpg);background-repeat: repeat;">
+			<br>
+			<ul style="list-style: none;color: white;font-size: 13px;display:inline;">
+				<li style="margin-left: 100px;margin-top: 20px;">地址：河北省石家庄市南二环东路20号河北师大新校区理科群</li><br>
+				<li style="margin-left: 100px;">联系电话： 0311-80786200    80786204</li><br>
+				<li style="margin-left: 100px;">版权所有：河北师范大学软件学院</li><br>
+				<li style="margin-left: 100px;">总访问次数：291607</li>
+			</ul>
+
+			
+
+		</div>
+		<div style="position: absolute;top: 1100px;left: 600px;">
+			<ul style="list-style: none;margin-left: 500px;top:0px;color: white;font-size: 13px;display:inline">
+				<li ><a>中国教育在线</a></li><br>
+				<li><a>雪梨教育在线大学平台</a></li><br>
+				<li><a>教育考试院</a></li><br>
+			</ul>
+		</div>
+
+		<div style="position: absolute;top: 1100px;left: 800px;">
+			<ul style="list-style: none;margin-left: 500px;top:0px;color: white;font-size: 13px;display:inline">
+				<li ><a>CSDN程序员</a></li><br>
+				<li><a>河北师范大学</a></li><br>
+				<li><a>佳诚网络</a></li><br>
+			</ul>
+		</div>
+
+		<div style="position: absolute;top: 1110px;left: 1000px;">
+			<img src="weixin.jpg">
+		</div>
+
+		<div style="position: absolute;top: 1110px;left: 1170px;">
+			<img src="weibo.jpg">
+		</div>
+
+
+
+
+
+
+</body>
+</html>
